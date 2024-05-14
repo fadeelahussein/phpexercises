@@ -1,0 +1,24 @@
+CREATE TABLE job_history(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(25),
+    last_name VARCHAR(25),
+    employee_id VARCHAR(20),
+    job_id INT(3),
+    department_id VARCHAR(3),
+   	start_date DATE,
+    end_date DATE
+)
+
+INSERT INTO job_history(first_name, last_name, employee_id, job_id, department_id, start_date, end_date) VALUES(
+'Khadijah', 'Gwarzo', 'CST/19/SWE/00267', 101, 'SWE', '2019-02-01', '2025-03-01'
+)
+
+UPDATE job_history SET start_date ='2019-01-20', end_date= '2025-01-20' WHERE first_name= 'Khadija' ;
+
+DELETE FROM job_history WHERE start_date ='2019-01-20', end_date= '2025-01-20' AND name = 'Khadijah'
+//aggregate function
+SELECT COUNT(*) FROM job_history;
+SELECT SUM(job_id) FROM job_history;
+SELECT MIN(job_id) FROM job_history;
+SELECT AVG(job_id) FROM job_history;
+SELECT MAX(job_id) FROM job_history;

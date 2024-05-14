@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.mydiv{
+			width: 40%;
+			border:solid black;
+			height: 400px;
+		}
+		.myform{
+			margin: 50px;
+		}
+		.submit{
+			padding: 0px;
+			height: 50px;
+			width: 100px;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="mydiv">
+		<form class="myform" action="" method="GET">
+			<label for="mylabel1" class="mylabel1" name="mylabel1">Item1 Price 500</label>
+			<input type="number" name="item1">
+
+			<br><br>
+
+			<label for="mylabel2" class="mylabel2" name="mylabel2">Item2 Price 800</label>
+			<input type="number" name="item2">
+
+			<br><br>
+
+			<button type="submit" name="submit" class="submit">Total</button>
+		</form>
+
+	</div>
+
+
+</body>
+<?php
+$mylabel1=500;
+$mylabel2=800;
+ if(isset($_POST['submit'];)){
+ $mylabel1 =$_POST['mylabel1'];
+ $mylabel2 =$_POST['mylabel2'];
+
+
+
+ $total= $mylabel1 + $mylabel2;
+
+ echo $total;
+};
+ 
+
+
+  
+
+
+?>
+</html>
+
